@@ -1,0 +1,221 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VIDA GORMITI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="category-styles.css">
+    <link rel="stylesheet" href="search-styles.css">
+    <link rel="stylesheet" href="mobile-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "config": "./config.js",
+        "script": "./script.js"
+      }
+    }
+    </script>
+    <script src="script.js" type="module"></script>
+</head>
+
+<body>
+    <div id="password-screen" class="password-screen">
+        <h2 style="color: #eee; margin-bottom: 20px;">VIDA GORMITI</h2>
+        <input type="password" id="password-input" placeholder="Enter Password">
+        <button id="password-submit">Enter <i class="fas fa-arrow-right"></i></button>
+        <p id="password-error" class="error-message"></p>
+    </div>
+
+    <div id="content" style="display: none; visibility: hidden;">
+        <aside class="sidebar">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h2 style="font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; font-size: 2.2em; margin: 0; background: linear-gradient(135deg, #f5f7fa, #b8c6db); -webkit-background-clip: text; background-clip: text; color: transparent;">VIDA GORMITI</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#trending"><i class="fas fa-fire"></i> Más Vistos</a></li>
+                    <li><a href="#search"><i class="fas fa-search"></i> Buscar</a></li>
+                    <li><a href="#upload"><i class="fas fa-upload"></i> Subir</a></li>
+                </ul>
+            </nav>
+            <div style="margin-top: auto; padding: 20px; text-align: center; font-size: 0.9em; color: #aaa;">
+                <p>VIDA GORMITI</p>
+            </div>
+        </aside>
+        <main class="main-content">
+            <!-- Home Page -->
+            <section id="home" class="home">
+                <div class="banner">
+                    <h1>VIDA GORMITI</h1>
+                </div>
+
+                <!-- Últimos Subidos Section -->
+                <div class="video-section">
+                    <h2>Últimos Subidos</h2>
+                    <div class="video-carousel">
+                        <div class="video-item">
+                            <img src="https://via.placeholder.com/320x180/3498db/fff" alt="Video Thumbnail">
+                            <h3>Título del Video 1</h3>
+                        </div>
+                        <div class="video-item">
+                            <img src="https://via.placeholder.com/320x180/3498db/fff" alt="Video Thumbnail">
+                            <h3>Título del Video 2</h3>
+                        </div>
+                        <!-- More videos -->
+                    </div>
+                </div>
+
+                <!-- Videos Recomendados Section -->
+                <div class="video-section">
+                    <h2>Videos Recomendados</h2>
+                    <div class="video-carousel">
+                        <div class="video-item">
+                            <img src="https://via.placeholder.com/320x180/3498db/fff" alt="Video Thumbnail">
+                            <h3>Título del Video 1</h3>
+                        </div>
+                        <div class="video-item">
+                            <img src="https://via.placeholder.com/320x180/3498db/fff" alt="Video Thumbnail">
+                            <h3>Título del Video 2</h3>
+                        </div>
+                        <!-- More videos -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trending Page -->
+            <section id="trending" class="trending" style="display: none;">
+                <h2>Trending Videos</h2>
+                <div class="video-grid">
+                    <!-- Trending video thumbnails will go here -->
+                    <div class="video-item">
+                        <img src="https://via.placeholder.com/320x180/8e44ad/fff" alt="Video Thumbnail">
+                        <h3>Video Title 1</h3>
+                    </div>
+                    <div class="video-item">
+                        <img src="https://via.placeholder.com/320x180/8e44ad/fff" alt="Video Thumbnail">
+                        <h3>Video Title 2</h3>
+                    </div>
+                    <!-- More videos -->
+                </div>
+            </section>
+
+            <!-- Search Page -->
+            <section id="search" class="categories" style="display: none;">
+                <h2>Buscar Videos</h2>
+                
+                <div class="search-interface">
+                    <div class="search-top-bar">
+                        <div class="search-input-container">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="search-input" placeholder="Buscar videos...">
+                        </div>
+                        <button class="filter-toggle">
+                            <i class="fas fa-filter"></i> Filtros
+                        </button>
+                    </div>
+                    
+                    <div id="selected-filters">
+                        <!-- Selected filters will appear here -->
+                    </div>
+                    
+                    <div class="filters-container">
+                        <div class="filter-panel">
+                            <h3><i class="fas fa-tags"></i> Categorías</h3>
+                            <div id="category-list" class="chip-container">
+                                <div class="filter-chip" data-value="Fiesta">Fiesta</div>
+                                <div class="filter-chip" data-value="Quedadas">Quedadas</div>
+                                <div class="filter-chip" data-value="Free">Free</div>
+                                <div class="filter-chip" data-value="Otro">Otro</div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-panel">
+                            <h3><i class="fas fa-users"></i> Personas</h3>
+                            <div id="person-list" class="chip-container">
+                                <div class="filter-chip" data-value="Dani">Dani</div>
+                                <div class="filter-chip" data-value="Javi">Javi</div>
+                                <div class="filter-chip" data-value="Alex">Alex</div>
+                                <div class="filter-chip" data-value="Barredo">Barredo</div>
+                                <div class="filter-chip" data-value="Cillero">Cillero</div>
+                                <div class="filter-chip" data-value="Bea">Bea</div>
+                                <div class="filter-chip" data-value="Jorge">Jorge</div>
+                                <div class="filter-chip" data-value="Maria">Maria</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upload Page -->
+            <section id="upload" class="upload" style="display: none;">
+                <h2>Subir Video</h2>
+                <p>Comparte tu contenido con la comunidad:</p>
+
+                <div id="selected-filters-upload">
+                    <!-- Selected filters will appear here -->
+                </div>
+
+                <div class="filter-container">
+                    <div class="filter-section">
+                        <h3><i class="fas fa-tags"></i> Categorías:</h3>
+                        <ul id="category-list-upload" class="filter-list">
+                            <li data-value="Fiesta">Fiesta</li>
+                            <li data-value="Quedadas">Quedadas</li>
+                            <li data-value="Free">Free</li>
+                            <li data-value="Otro">Otro</li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3><i class="fas fa-users"></i> Personas:</h3>
+                        <ul id="person-list-upload" class="filter-list">
+                            <li data-value="Dani">Dani</li>
+                            <li data-value="Javi">Javi</li>
+                            <li data-value="Alex">Alex</li>
+                            <li data-value="Barredo">Barredo</li>
+                            <li data-value="Cillero">Cillero</li>
+                            <li data-value="Bea">Bea</li>
+                            <li data-value="Jorge">Jorge</li>
+                            <li data-value="Maria">Maria</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="input-group">
+                        <label for="video-title">Título del Video:</label>
+                        <input type="text" id="video-title" name="video-title" placeholder="Escribe el título aquí">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="video-thumbnail">Miniatura (Opcional):</label>
+                        <input type="file" id="video-thumbnail" name="video-thumbnail" accept="image/*">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="video-upload">Selecciona el Video:</label>
+                        <input type="file" id="video-upload" name="video-upload" accept="video/*" required>
+                    </div>
+
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <button type="submit" class="upload-button">Subir Video</button>
+                </form>
+
+                <video id="video-preview" width="400" controls style="display: none;"></video>
+                <p id="upload-message"></p>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
